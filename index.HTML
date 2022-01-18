@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Store</title>
+    <link rel = "stylesheet" href = "beu.css">
+</head>
+<body>   
+    
+    <h1>Store</h1>
+    <div class = "row">
+        <div class = "collom">
+      <div class = "bankButton">
+          <h2>John Bank</h2>
+          <h3>Balance:</h3><h3 id = "inBank"></h3>
+          <h3>Loaned:</h3><h3 id = "loaning"></h3>
+          <button class = "loanButt" onclick = "myLoan()">Get a Loan</button>
+      </div>
+      <div class = "work">
+          <h2>Work</h2>         
+          <h3 >Pay:</h3><h3 id = "worked"></h3>
+          <h3>To Loan:</h3> <h3 id = "inLoan"></h3>
+          <button class = "toBank" onclick = "sendToBank()">Bank</button> 
+          <button class = "toWork" onclick = "workedPay()">Work</button>
+          <button class = "toLoan" onclick = "payingLoanBack()">Pay off loan</button>
+      </div>
+      <div class = "dropButton">
+        <h2>Laptops</h2>
+        
+        <div class = "dropButton-content">
+        <select name = "computer" id = "computer"></select>
+        </div>
+        <h3>Features</h3>
+        <span id = "specs"></span><br/>
+      </div> 
+    </div>
+</div>
+
+<div class = "footer">
+<div class = "buyComputer">
+  <div class = "img">
+  <div id = "image"></div></div>
+        <h3>Name of computer:<div id = "title"></div></h3>
+        <span id = "price"></span><h3>Kr</h3>
+        <span id = "description"></span><button class = "buyNow" onclick = "buyComputer()">Buy now</button>
+        </div>
+    <script src = "app.js" type = "text/javascript"></script>
+</body>
+</html>
