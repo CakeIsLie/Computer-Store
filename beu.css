@@ -1,0 +1,187 @@
+body {background-color: azure}
+h1 { /*The header*/
+    background-color:black;
+    border: 15px solid black;
+    opacity: 0.6;
+    color: white;
+  }
+  .dropBName {
+    background-color: #4648ce;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px; /*Rounded button*/
+  }
+  .dropButton {
+    border: 1px solid black;
+    border-style: groove;
+    background-color: rgb(210, 217, 223);
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    position: relative;
+    display: inline-block;
+  }
+  .dropButton-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropButton-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropButton-content a:hover {background-color: #f1f1f1} 
+  .dropButton:hover .dropButton-content {
+    display: block;
+  }
+  .dropButton:hover .dropBName { /*Change color when mouse hover over it*/
+    background-color: #114568d5;
+  }
+
+  .loanButt {
+    background-color: #4648ce;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px; 
+  }
+  .bankButton {
+    border: 1px solid black;
+    border-style: groove;
+    background-color: rgb(210, 217, 223);
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    position: relative;
+    display: inline-block;
+  }
+  .bankButton:hover .loanButt {
+    background-color: #114568d5;
+  } 
+
+  .toBank {
+    background-color: #4648ce;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  .work {
+    border: 1px solid black;
+    border-style: groove;
+    background-color: rgb(210, 217, 223);
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    position: relative;
+    display: inline-block;
+  }
+  .work:hover .toBank {
+    background-color: #114568d5;
+  } 
+
+  .toWork {
+    background-color: #4648ce;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  .work {
+    border: 1px solid black;
+    border-style: groove;
+    background-color: rgb(210, 217, 223);
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    position: relative;
+    display: inline-block;
+  }
+  .work:hover .toWork {
+    background-color: #114568d5;
+  }
+
+  .toLoan {
+    background-color: #4648ce;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  .work {
+    border: 1px solid black;
+    border-style: groove;
+    background-color: rgb(210, 217, 223);
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    position: relative;
+    display: inline-block;
+  }
+  .work:hover .toLoan {
+    background-color: #114568d5;
+  }
+
+  .buyNow {
+    background-color: #4648ce;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  .buyComputer {
+    border: 1px solid black;
+    border-style: groove;
+    background-color: rgb(210, 217, 223);
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    position: relative;
+    display: inline-block;
+  }
+  .buyComputer:hover .buyNow {
+    background-color: #114568d5;
+  } 
+
+.column { /*Create three equal columns that floats next to each other*/
+    float: left;
+    width: 33.33%;
+    padding: 15px;   
+  } 
+  
+  .row:after { /*Clear floats after the columns*/
+    content: "";
+    display: table;
+    clear: both; 
+  }
+ 
+.footer { /*Style the footer*/
+    padding: 10px;
+    text-align: center;
+  }
+
