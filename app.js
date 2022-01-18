@@ -146,6 +146,10 @@ function payingLoanBack(){
         priceElement.innerText = computer[0].price;
         imageElement.innerText = computer[0].image;
         titleElement.innerText = computer[0].title; 
+        let img = document.createElement("img"); 
+        img.src = "https://noroff-komputer-store-api.herokuapp.com/assets/images/1.png"; 
+        let src = document.getElementById("image"); 
+        src.appendChild(img);
     }
 
 const addComp = (compur) => {
