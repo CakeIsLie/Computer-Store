@@ -1,4 +1,3 @@
-
 const computerElement = document.getElementById("computer");
 const descriptElement = document.getElementById("description");
 const specElement = document.getElementById("specs");
@@ -12,9 +11,8 @@ const inBankElement = document.getElementById("inBank");
 const workedElement = document.getElementById("worked");
 const inLoanElement = document.getElementById("inLoan");
 
- 
+//All my variables
 let computer = [];
-let title = "";
 let inBank = 0;
 let worked = 0;
 let inLoan = 0;
@@ -30,10 +28,10 @@ let cantLoanBig = 0;
 function myLoan() {      
     if (loanCheck == 0){ //Makes so you can get a loan
       money = prompt("Please enter the amount you want to loan, if you clicked it by accident please click OK");
-      if(money <= cantLoanBig){
-        if (money != 0) {
+      if(money <= cantLoanBig){ //Make sure the loan is not to big (bigger then twice the money in the bank)
+        if (money != 0) { //If a loan is taken
         document.getElementById("loaning").innerHTML = money; //Show how much have been loaned
-        loanCheck = 1;
+        loanCheck = 1; //Change so unable to get annother loan while having one 
     } 
     else{
         loanCheck = 0;
@@ -149,7 +147,7 @@ function payingLoanBack(){
         let img = document.createElement("img"); 
         img.src = "https://noroff-komputer-store-api.herokuapp.com/assets/images/1.png"; 
         let src = document.getElementById("image"); 
-        src.appendChild(img);
+        src.appendChild(img); //Display the first image without need to choose computer
     }
 
 const addComp = (compur) => {
@@ -159,23 +157,23 @@ const addComp = (compur) => {
     computerElement.appendChild(compElement);
 }
 
-const computerChange = e =>{ //add the specs
+const computerChange = e =>{ //Add the specs
     const selectComputer = computer[e.target.selectedIndex];
     specElement.innerText = selectComputer.specs;
 }
-computerElement.addEventListener("change", computerChange); //change the specs when changing computer
+computerElement.addEventListener("change", computerChange); //Change the specs when changing computer
 
-const computerChangeDisc = e =>{ //add the description
+const computerChangeDisc = e =>{ //Add the description
     const selectComputer = computer[e.target.selectedIndex];
     descriptElement.innerText = selectComputer.description;    
 }
-computerElement.addEventListener("change", computerChangeDisc); //change the description when changing computer
+computerElement.addEventListener("change", computerChangeDisc); //Change the description when changing computer
 
-const computerChangePrice = e =>{ //add the price
+const computerChangePrice = e =>{ //Add the price
     const selectComputer = computer[e.target.selectedIndex];
     priceElement.innerText = selectComputer.price;
 }
-computerElement.addEventListener("change", computerChangePrice); //change price when changing computer
+computerElement.addEventListener("change", computerChangePrice); //Change price when changing computer
 
 const computerChangeComp = e =>{ //Add the computer title
     const selectComputer = computer[e.target.selectedIndex];
@@ -198,10 +196,10 @@ const computerChangeImage = e =>{ //Add the computer image
     const selectComputer = computer[e.target.selectedIndex];
     imageElement.innerText = selectComputer.image;
     let img = document.createElement("img"); 
-    img.src = "https://noroff-komputer-store-api.herokuapp.com/" + selectComputer.image; 
+    img.src = "https://noroff-komputer-store-api.herokuapp.com/" + selectComputer.image; //Add the change to the base url
     let src = document.getElementById("image"); 
-    src.appendChild(img); 
-    if(selectComputer.image == computer[4].image){
+    src.appendChild(img); //Display image
+    if(selectComputer.image == computer[4].image){ //Image 5 is png, if 5 is chosen change it to correct image (it says jpg in JSON)
         let img = document.createElement("img"); 
         img.src = "https://noroff-komputer-store-api.herokuapp.com/assets/images/5.png"; 
         let src = document.getElementById("image"); 
